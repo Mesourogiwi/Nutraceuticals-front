@@ -13,8 +13,6 @@ export class Uses extends Component {
         aux: []
       }
     
-     
-    
     
       constructor() {
         super();

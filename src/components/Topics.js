@@ -24,12 +24,12 @@ export class Topics extends Component {
     async componentDidMount() {
         const { values } = this.props;
         if(values.useR[1] != null){
-        console.log(values.useR[1][0]);
+        //console.log(values.useR[1][0]);
         for(let i = 1; i<values.useR.length; i++) {
             this.state.valor_id[i-1] = values.useR[i][i-1].id_use;
             this.state.valor_value[i-1] = values.useR[i][i-1].use;
         }
-        console.log(this.state.valor_id);
+    // console.log(this.state.valor_id);
         // valorr.forEach(function(valorr) {
             
         //     console.log(valorr.id_use);
@@ -50,14 +50,14 @@ export class Topics extends Component {
                 this.setState({ topics: response.data });
 
                 for (let i = 0; i < response.data.length; i++) {
-                     console.log(response.data[i]);
+                     //console.log(response.data[i]);
                      this.state.aux_t.push(response.data[i].Topic)
                  }
-                console.log(this.state.aux_t)
+                //console.log(this.state.aux_t)
                   
             });
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             
         }
     }
@@ -80,7 +80,7 @@ export class Topics extends Component {
 
     //multiselect functions
     onRemove(selectedList) {
-        console.log(selectedList)
+        //console.log(selectedList)
     }
 
     resetValues() {
@@ -93,7 +93,7 @@ export class Topics extends Component {
     }
 
     onSelect = (selectedItem) => {
-        console.log(selectedItem)
+        //console.log(selectedItem)
         const { topicChange } = this.props;
         topicChange(selectedItem);
         // this.setState({usee: [...this.state.usee, selectedItem]});
