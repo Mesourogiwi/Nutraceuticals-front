@@ -120,6 +120,9 @@ export class Topics extends Component {
         e.preventDefault();
         this.props.prevStep();
     };
+    refresh = () => {
+        window.location.reload();
+    }
 
     render() {
         const { values, inputChange } = this.props;
@@ -146,7 +149,7 @@ export class Topics extends Component {
 
                 <div className="row">
                     <div className="col-6">
-                        <button className="btn btn-danger" onClick={this.back}>Back</button>
+                        <button className="btn btn-danger" onClick={this.refresh}>Back</button>
                     </div>
                     <div className="col-6 text-right">
                         <button className="btn btn-primary" onClick={this.continue}>Continue</button>

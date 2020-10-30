@@ -82,6 +82,9 @@ export class Success extends Component {
         e.preventDefault();
         this.props.prevStep();
     };
+    refresh = () => {
+      window.location.reload();
+    }
 
     render() {
         const products = this.state.products.map(product => {
@@ -110,7 +113,7 @@ export class Success extends Component {
           </tbody>
         </Table>
       </div>
-                <button className="btn btn-danger" onClick={this.back}>Back</button>
+                <button className="btn btn-danger" onClick={this.refresh}>Back</button>
         
     </div>
 
